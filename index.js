@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-const http = require("http");
 app.get("/", (req, res) => {
   res.send("server is up and running");
 });
