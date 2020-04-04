@@ -53,7 +53,7 @@
         "dockerLabels": null,
         "systemControls": null,
         "privileged": null,
-        "name": "emmora"
+        "name": "node-app"
       }
     ],
     "placementConstraints": [],
@@ -63,7 +63,7 @@
       "EC2",
       "FARGATE"
     ],
-    "taskDefinitionArn": "arn:aws:ecs:eu-central-1:465062991879:task-definition/first-run-task-definition:1",
+    "taskDefinitionArn": "arn:aws:ecs:eu-central-1:465062991879:task-definition/first-run-task-definition:5",
     "family": "first-run-task-definition",
     "requiresAttributes": [
       {
@@ -115,7 +115,7 @@
     ],
     "networkMode": "awsvpc",
     "cpu": "256",
-    "revision": 1,
+    "revision": 5,
     "status": "ACTIVE",
     "inferenceAccelerators": null,
     "proxyConfiguration": null,
