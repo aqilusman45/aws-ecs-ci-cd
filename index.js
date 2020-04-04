@@ -8,21 +8,22 @@ mongoose.connect(`${process.env.DB_URI}`, {
 });
 
 const con = mongoose.connection;
-
+let runing = false;
 con.once("open", (error) => {
   if (error) {
     console.error(error);
     throw error;
   }
+  runing = true;
   console.log("We are connected");
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8001;
 
 app.get("/", (req, res) => {
-  res.send("server is up and running");
+  res.send(`server is up and running ${runing}`);
 });
 
 app.listen(PORT, () => {
-  console.log(`app is running on port hahah ${PORT}`);
+  console.log(`app is running on port ${PORT}`);
 });
